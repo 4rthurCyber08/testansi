@@ -1,0 +1,8 @@
+[router1]
+192.168.101.128
+
+[router1:vars]
+ansible_user=admin
+ansible_password=C1sc0123
+ansible_connection=network_cli
+ansible_network_os=ios
