@@ -1,7 +1,7 @@
-[router1]
-192.168.101.128
+[csr]
+208.8.8.151
 
-[router1:vars]
+[csr:vars]
 ansible_user=admin
 ansible_password=C1sc0123
 ansible_connection=network_cli
