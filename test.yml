@@ -1,8 +1,8 @@
 ---
 - name: addloop
-  hosts: router1
+  hosts: csr
   gather_facts: no
-  become: yes
+  become: no
   tasks:
     - name: "Create Loopbacks"
       ios_command:
