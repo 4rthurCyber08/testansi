@@ -1,28 +1,15 @@
 ---
-- name: addloop
-  hosts: csr
-  gather_facts: no
-  become: no
-  tasks:
-    - name: "Create Loopbacks"
-      ios_command:
-        commands:
-          - conf t
-          - int lo100
-          - ip add 100.100.100.100 255.255.255.255
-          - exit
-          - int lo101
-          - ip add 101.101.101.101 255.255.255.255
-          - exit
-          - int lo102
-          - ip add 102.102.102.102 255.255.255.255
-      vars:
-        ansible_network_os: ios
-    
-    - name: "Change Name"
-      ios_command:
-        commands:
-          - conf t
-          - hostname devopsnaako
-      vars:
-        ansible_network_os: ios
+- name: LOOPBACK
+hosts: csr
+gather_facts: no
+become: yes
+tasks:
+- name: Create LOOPBACK
+ios_command:
+commands:
+- configure terminal
+- int lo 1
+- ip add 1.1.1.1 255.255.255.0
+- no shut
+vars:
+ansible_network_os: ios
