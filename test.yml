@@ -1,3 +1,4 @@
+---
 - name: LOOPBACK
   hosts: csr
   gather_facts: no
