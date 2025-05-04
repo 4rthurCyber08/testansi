@@ -5,9 +5,9 @@
   become: yes
   tasks:
     - name: Createloop
-    ios_command:
-      commands:
-        - configure terminal
-        - int lo 1
-        - ip add 1.1.1.1 255.255.255.0
-        - no shut
+      ios_command:
+        commands:
+          - configure terminal
+          - int lo 1
+          - ip add 1.1.1.1 255.255.255.0
+          - no shut
