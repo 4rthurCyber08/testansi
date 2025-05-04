@@ -1,15 +1,13 @@
 ---
-- name: LOOPBACK
+- name: loop
   hosts: csr
   gather_facts: no
   become: yes
   tasks:
-    - name: Create LOOPBACK
+    - name: Createloop
     ios_command:
       commands:
         - configure terminal
         - int lo 1
         - ip add 1.1.1.1 255.255.255.0
         - no shut
-    vars:
-      ansible_network_os: ios
